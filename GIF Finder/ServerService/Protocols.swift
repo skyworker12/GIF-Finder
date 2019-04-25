@@ -9,5 +9,8 @@
 import Foundation
 
 protocol ApiMethods{
+    
+    var apiKey: String {get}
+    
     func loadWithUrl(value: String, downloadOption: ApiRequests, completion: @escaping (Data?, Error?) -> Void)
 }

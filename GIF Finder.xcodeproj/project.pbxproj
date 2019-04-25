@@ -17,6 +17,9 @@
 		DD8884C62269A40A001FB1FC /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8884C52269A40A001FB1FC /* APIManager.swift */; };
 		DD8884C8226D8424001FB1FC /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8884C7226D8423001FB1FC /* Protocols.swift */; };
 		DD8884CB226D917E001FB1FC /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8884CA226D917E001FB1FC /* Server.swift */; };
+		DD8884F8226FAAFD001FB1FC /* GifListGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8884F7226FAAFD001FB1FC /* GifListGetter.swift */; };
+		DD8884FA226FB224001FB1FC /* GifList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8884F9226FB224001FB1FC /* GifList.swift */; };
+		DD8884FD2271017F001FB1FC /* GifListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8884FC2271017F001FB1FC /* GifListProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		DD8884C52269A40A001FB1FC /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		DD8884C7226D8423001FB1FC /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		DD8884CA226D917E001FB1FC /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		DD8884F7226FAAFD001FB1FC /* GifListGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifListGetter.swift; sourceTree = "<group>"; };
+		DD8884F9226FB224001FB1FC /* GifList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifList.swift; sourceTree = "<group>"; };
+		DD8884FC2271017F001FB1FC /* GifListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifListProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,10 +92,10 @@
 		DD8884AE2269A172001FB1FC /* GIF Finder */ = {
 			isa = PBXGroup;
 			children = (
+				DD8884F2226FA910001FB1FC /* Modules */,
 				DD8884C9226D90E1001FB1FC /* Entities */,
 				DD8884C42269A306001FB1FC /* ServerService */,
 				DD8884AF2269A172001FB1FC /* AppDelegate.swift */,
-				DD8884B12269A172001FB1FC /* ViewController.swift */,
 				DD8884B32269A172001FB1FC /* Main.storyboard */,
 				DD8884B92269A176001FB1FC /* Assets.xcassets */,
 				DD8884BB2269A176001FB1FC /* LaunchScreen.storyboard */,
@@ -112,8 +118,59 @@
 			isa = PBXGroup;
 			children = (
 				DD8884CA226D917E001FB1FC /* Server.swift */,
+				DD8884F9226FB224001FB1FC /* GifList.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		DD8884F2226FA910001FB1FC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DD8884F6226FA971001FB1FC /* GifList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DD8884F3226FA930001FB1FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DD8884F7226FAAFD001FB1FC /* GifListGetter.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DD8884F4226FA93C001FB1FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DD8884F5226FA949001FB1FC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DD8884B12269A172001FB1FC /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DD8884F6226FA971001FB1FC /* GifList */ = {
+			isa = PBXGroup;
+			children = (
+				DD8884FB22710125001FB1FC /* Protocols */,
+				DD8884F3226FA930001FB1FC /* Model */,
+				DD8884F4226FA93C001FB1FC /* View */,
+				DD8884F5226FA949001FB1FC /* Controller */,
+			);
+			path = GifList;
+			sourceTree = "<group>";
+		};
+		DD8884FB22710125001FB1FC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DD8884FC2271017F001FB1FC /* GifListProtocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +289,11 @@
 			files = (
 				DD8884C8226D8424001FB1FC /* Protocols.swift in Sources */,
 				DD8884B22269A172001FB1FC /* ViewController.swift in Sources */,
+				DD8884FA226FB224001FB1FC /* GifList.swift in Sources */,
 				DD8884B02269A172001FB1FC /* AppDelegate.swift in Sources */,
+				DD8884FD2271017F001FB1FC /* GifListProtocols.swift in Sources */,
 				DD8884C62269A40A001FB1FC /* APIManager.swift in Sources */,
+				DD8884F8226FAAFD001FB1FC /* GifListGetter.swift in Sources */,
 				DD8884CB226D917E001FB1FC /* Server.swift in Sources */,
 				DD8884B82269A172001FB1FC /* GIF_Finder.xcdatamodeld in Sources */,
 			);

@@ -9,70 +9,27 @@
 import Foundation
 import Alamofire
 
-//"https://api.giphy.com/v1/gifs/search?api_key=iNt1lUL0tXnsnHq9VFwnygaecEp4Niyk&q=cat&limit=25&offset=0&rating=G&lang=en"
-
 class APIManager: ApiMethods{
+    
+    internal var apiKey: String{
+        get{
+            return "api_key=iNt1lUL0tXnsnHq9VFwnygaecEp4Niyk"
+        }
+    }
     
     func loadWithUrl(value: String, downloadOption: ApiRequests, completion: @escaping (Data?, Error?) -> Void) {
         
-        guard let url = URL(string: makeRequest(downloadOption: downloadOption, value: value)) else {return}
+        let url = makeRequest(downloadOption: downloadOption, value: value)
         
-        Alamofire.request(url).responseData(completionHandler:{data in
-            completion(data.data, data.error)
+        Alamofire.request(url).responseData(completionHandler:{response in
+
+            completion(response.data, response.error)
+
         })
     }
 }
 
 extension APIManager{
-    
-    private var urlResourse: String{
-        get{
-            return "https://api.giphy.com/v1/gifs/search?"
-        }
-    }
-    
-    private var apiKey: String{
-        get{
-            return "api_key=iNt1lUL0tXnsnHq9VFwnygaecEp4Niyk&q"
-        }
-    }
-    
-    private var searchValue: String{
-        get{
-            return "&q="
-        }
-    }
-    
-    private var limit: String{
-        get{
-            return "&limit=25"
-        }
-    }
-  
-    private var offset: String{
-        get{
-            return "&offset=0"
-        }
-    }
-    
-    private var rating: String{
-        get{
-            return "&rating=G"
-        }
-    }
-    
-    private var language: String{
-        get{
-            return "&lang=ru"
-        }
-    }
-    
-    private func createUrl(value: String) -> String{
-        
-        let url = urlResourse + apiKey + searchValue + value + limit + offset + rating + language
-        
-        return url
-    }
     
     private func makeRequest(downloadOption: ApiRequests, value: String) -> String{
         
@@ -82,7 +39,7 @@ extension APIManager{
             
         case .downloadGifList:
             
-            url = createUrl(value: value)
+            url = ("https://api.giphy.com/v1/gifs/search?\(apiKey)&q=\(value)&limit=25&offset=0&rating=G&lang=ru")
             
         case .downloadGif:
            
