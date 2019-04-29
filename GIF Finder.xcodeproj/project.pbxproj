@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		7F48355E43F0BC105775DAAE /* Pods_GIF_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E02E0BE8E45DD7AD2AEC806 /* Pods_GIF_Finder.framework */; };
 		DD8884B02269A172001FB1FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8884AF2269A172001FB1FC /* AppDelegate.swift */; };
-		DD8884B22269A172001FB1FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8884B12269A172001FB1FC /* ViewController.swift */; };
+		DD8884B22269A172001FB1FC /* GifListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8884B12269A172001FB1FC /* GifListViewController.swift */; };
 		DD8884B52269A172001FB1FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD8884B32269A172001FB1FC /* Main.storyboard */; };
 		DD8884B82269A172001FB1FC /* GIF_Finder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD8884B62269A172001FB1FC /* GIF_Finder.xcdatamodeld */; };
 		DD8884BA2269A176001FB1FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD8884B92269A176001FB1FC /* Assets.xcassets */; };
@@ -20,6 +20,11 @@
 		DD8884F8226FAAFD001FB1FC /* GifListGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8884F7226FAAFD001FB1FC /* GifListGetter.swift */; };
 		DD8884FA226FB224001FB1FC /* GifList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8884F9226FB224001FB1FC /* GifList.swift */; };
 		DD8884FD2271017F001FB1FC /* GifListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8884FC2271017F001FB1FC /* GifListProtocols.swift */; };
+		DD8884FF2272423D001FB1FC /* GifCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8884FE2272423D001FB1FC /* GifCollectionViewCell.swift */; };
+		DD888501227242D1001FB1FC /* GifListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD888500227242D1001FB1FC /* GifListView.swift */; };
+		DD88850322725259001FB1FC /* GifListCWDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88850222725259001FB1FC /* GifListCWDataSource.swift */; };
+		DD8885062272DCA3001FB1FC /* GifListVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8885052272DCA3001FB1FC /* GifListVCExtension.swift */; };
+		DD8885082276D1C9001FB1FC /* SingleGifGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8885072276D1C9001FB1FC /* SingleGifGetter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +33,7 @@
 		95BF9E0743F7F07F7EB7F4A6 /* Pods-GIF Finder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GIF Finder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GIF Finder/Pods-GIF Finder.debug.xcconfig"; sourceTree = "<group>"; };
 		DD8884AC2269A172001FB1FC /* GIF Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GIF Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD8884AF2269A172001FB1FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DD8884B12269A172001FB1FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DD8884B12269A172001FB1FC /* GifListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifListViewController.swift; sourceTree = "<group>"; };
 		DD8884B42269A172001FB1FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD8884B72269A172001FB1FC /* GIF_Finder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GIF_Finder.xcdatamodel; sourceTree = "<group>"; };
 		DD8884B92269A176001FB1FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,6 +45,11 @@
 		DD8884F7226FAAFD001FB1FC /* GifListGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifListGetter.swift; sourceTree = "<group>"; };
 		DD8884F9226FB224001FB1FC /* GifList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifList.swift; sourceTree = "<group>"; };
 		DD8884FC2271017F001FB1FC /* GifListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifListProtocols.swift; sourceTree = "<group>"; };
+		DD8884FE2272423D001FB1FC /* GifCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifCollectionViewCell.swift; sourceTree = "<group>"; };
+		DD888500227242D1001FB1FC /* GifListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifListView.swift; sourceTree = "<group>"; };
+		DD88850222725259001FB1FC /* GifListCWDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifListCWDataSource.swift; sourceTree = "<group>"; };
+		DD8885052272DCA3001FB1FC /* GifListVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifListVCExtension.swift; sourceTree = "<group>"; };
+		DD8885072276D1C9001FB1FC /* SingleGifGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleGifGetter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +106,6 @@
 				DD8884C9226D90E1001FB1FC /* Entities */,
 				DD8884C42269A306001FB1FC /* ServerService */,
 				DD8884AF2269A172001FB1FC /* AppDelegate.swift */,
-				DD8884B32269A172001FB1FC /* Main.storyboard */,
 				DD8884B92269A176001FB1FC /* Assets.xcassets */,
 				DD8884BB2269A176001FB1FC /* LaunchScreen.storyboard */,
 				DD8884BE2269A176001FB1FC /* Info.plist */,
@@ -135,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				DD8884F7226FAAFD001FB1FC /* GifListGetter.swift */,
+				DD8885072276D1C9001FB1FC /* SingleGifGetter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -142,6 +152,9 @@
 		DD8884F4226FA93C001FB1FC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DD8884FE2272423D001FB1FC /* GifCollectionViewCell.swift */,
+				DD888500227242D1001FB1FC /* GifListView.swift */,
+				DD88850222725259001FB1FC /* GifListCWDataSource.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -149,7 +162,7 @@
 		DD8884F5226FA949001FB1FC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DD8884B12269A172001FB1FC /* ViewController.swift */,
+				DD8884B12269A172001FB1FC /* GifListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -157,6 +170,8 @@
 		DD8884F6226FA971001FB1FC /* GifList */ = {
 			isa = PBXGroup;
 			children = (
+				DD8884B32269A172001FB1FC /* Main.storyboard */,
+				DD8885042272DC7A001FB1FC /* Extension */,
 				DD8884FB22710125001FB1FC /* Protocols */,
 				DD8884F3226FA930001FB1FC /* Model */,
 				DD8884F4226FA93C001FB1FC /* View */,
@@ -171,6 +186,14 @@
 				DD8884FC2271017F001FB1FC /* GifListProtocols.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DD8885042272DC7A001FB1FC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DD8885052272DCA3001FB1FC /* GifListVCExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,14 +311,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD8884C8226D8424001FB1FC /* Protocols.swift in Sources */,
-				DD8884B22269A172001FB1FC /* ViewController.swift in Sources */,
+				DD8884FF2272423D001FB1FC /* GifCollectionViewCell.swift in Sources */,
+				DD8885062272DCA3001FB1FC /* GifListVCExtension.swift in Sources */,
+				DD888501227242D1001FB1FC /* GifListView.swift in Sources */,
+				DD8884B22269A172001FB1FC /* GifListViewController.swift in Sources */,
 				DD8884FA226FB224001FB1FC /* GifList.swift in Sources */,
 				DD8884B02269A172001FB1FC /* AppDelegate.swift in Sources */,
 				DD8884FD2271017F001FB1FC /* GifListProtocols.swift in Sources */,
 				DD8884C62269A40A001FB1FC /* APIManager.swift in Sources */,
+				DD8885082276D1C9001FB1FC /* SingleGifGetter.swift in Sources */,
 				DD8884F8226FAAFD001FB1FC /* GifListGetter.swift in Sources */,
 				DD8884CB226D917E001FB1FC /* Server.swift in Sources */,
 				DD8884B82269A172001FB1FC /* GIF_Finder.xcdatamodeld in Sources */,
+				DD88850322725259001FB1FC /* GifListCWDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

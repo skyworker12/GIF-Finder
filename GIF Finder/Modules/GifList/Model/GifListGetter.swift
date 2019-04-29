@@ -22,9 +22,7 @@ class GifListGetter: GifsGetter {
                 let jsonArray = try decoder.decode(GifListJSON.self, from: data!)
                 
                 let gifArray = jsonArray.data.compactMap{GifList(title: $0.title , url: $0.images.fixedHeight.url)}
-                
-                //print(gifArray)
-                
+                                
                 completion(gifArray, error)
                 
             }catch{
