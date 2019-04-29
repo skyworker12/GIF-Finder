@@ -15,6 +15,7 @@ class GifListViewController: UIViewController {
     @IBOutlet var gifListView: GifListView!
     
     var collectionViewDataSource = GifListCWDataSource()
+    var navBarDelegate = GifListNavBarDelegate()
     
     var gifListArray = [GifList](){
         didSet{
@@ -32,6 +33,7 @@ class GifListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.gifListView.gifListNavBar.delegate = navBarDelegate
         self.gifListView.searchTextField.delegate = self
     }
     
@@ -50,5 +52,9 @@ class GifListViewController: UIViewController {
         })
     }
 
+    @IBAction func searchGifsAction(_ sender: Any) {
+        
+        self.searchGifs(text: self.gifListView.searchTextField.text!)
+    }
 }
 

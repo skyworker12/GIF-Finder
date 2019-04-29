@@ -25,6 +25,7 @@
 		DD88850322725259001FB1FC /* GifListCWDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88850222725259001FB1FC /* GifListCWDataSource.swift */; };
 		DD8885062272DCA3001FB1FC /* GifListVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8885052272DCA3001FB1FC /* GifListVCExtension.swift */; };
 		DD8885082276D1C9001FB1FC /* SingleGifGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8885072276D1C9001FB1FC /* SingleGifGetter.swift */; };
+		DD88850A22779CEF001FB1FC /* GifListNavBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88850922779CEF001FB1FC /* GifListNavBarDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		DD88850222725259001FB1FC /* GifListCWDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifListCWDataSource.swift; sourceTree = "<group>"; };
 		DD8885052272DCA3001FB1FC /* GifListVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifListVCExtension.swift; sourceTree = "<group>"; };
 		DD8885072276D1C9001FB1FC /* SingleGifGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleGifGetter.swift; sourceTree = "<group>"; };
+		DD88850922779CEF001FB1FC /* GifListNavBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifListNavBarDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				DD8884FE2272423D001FB1FC /* GifCollectionViewCell.swift */,
 				DD888500227242D1001FB1FC /* GifListView.swift */,
 				DD88850222725259001FB1FC /* GifListCWDataSource.swift */,
+				DD88850922779CEF001FB1FC /* GifListNavBarDelegate.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				DD8884FA226FB224001FB1FC /* GifList.swift in Sources */,
 				DD8884B02269A172001FB1FC /* AppDelegate.swift in Sources */,
 				DD8884FD2271017F001FB1FC /* GifListProtocols.swift in Sources */,
+				DD88850A22779CEF001FB1FC /* GifListNavBarDelegate.swift in Sources */,
 				DD8884C62269A40A001FB1FC /* APIManager.swift in Sources */,
 				DD8885082276D1C9001FB1FC /* SingleGifGetter.swift in Sources */,
 				DD8884F8226FAAFD001FB1FC /* GifListGetter.swift in Sources */,

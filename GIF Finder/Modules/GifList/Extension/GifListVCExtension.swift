@@ -18,7 +18,7 @@ extension GifListViewController: UITextFieldDelegate{
         return false
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+   /* func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         guard let inputText = textField.text else {return false}
         
@@ -29,6 +29,6 @@ extension GifListViewController: UITextFieldDelegate{
         }
         
         return true
-    }
+    }*/
     
 }

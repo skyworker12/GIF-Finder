@@ -12,5 +12,7 @@ class GifListView: UIView {
 
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var gifListCollectionView: UICollectionView!
+    @IBOutlet weak var gifListNavBar: UINavigationBar!
+    
     
 }
