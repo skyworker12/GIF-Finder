@@ -13,3 +13,9 @@ protocol GifsGetter {
     func getGifList(text: String, downloadType: ApiRequests, completion: @escaping ([GifList]?, Error?) -> ())
     
 }
+
+protocol GifGetter{
+    
+    func getGif(url: String, downloadType: ApiRequests, completion: @escaping (Data?, Error?, String) -> ())
+    
+}

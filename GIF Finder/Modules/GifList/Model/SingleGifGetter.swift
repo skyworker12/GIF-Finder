@@ -8,15 +8,15 @@
 
 import Foundation
 
-class SingleGifGetter{
+class SingleGifGetter: GifGetter{
     
    var apiManager = APIManager()
     
-    func getGif(url: String, downloadType: ApiRequests, completion: @escaping (Data?, Error?) -> ()){
+    func getGif(url: String, downloadType: ApiRequests, completion: @escaping (Data?, Error?, String) -> ()){
         
         self.apiManager.loadWithUrl(value: url, downloadOption: downloadType, completion: { data, error in
             
-            completion(data, error)
+            completion(data, error, url)
             
         })
     }

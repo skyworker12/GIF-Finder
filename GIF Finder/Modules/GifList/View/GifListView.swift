@@ -14,5 +14,15 @@ class GifListView: UIView {
     @IBOutlet weak var gifListCollectionView: UICollectionView!
     @IBOutlet weak var gifListNavBar: UINavigationBar!
     
+     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        let touch: UITouch? = touches.first
+        
+        if touch?.view == self || touch?.view != self.gifListNavBar{
+            
+            self.searchTextField.resignFirstResponder()
+            
+        }
+    }
     
 }

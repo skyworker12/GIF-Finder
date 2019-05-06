@@ -24,18 +24,25 @@ class GifListCWDataSource: NSObject, UICollectionViewDataSource{
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "gifCell", for: indexPath) as! GifCollectionViewCell
         
+        cell.turningOnActivityIndicator()
         cell.gifTitleLabel.text = self.objectsArray[indexPath.row].title
         
         singleGifGetter.getGif(url: self.objectsArray[indexPath.row].url, downloadType: .downloadGif , completion:{
-            data, error in
+            data, error, url in
             
             if let data = data{
+                
                 DispatchQueue.main.async {
                     
-                    let imageData = FLAnimatedImage(animatedGIFData: data)
-                    cell.gifAnimatedImage.animatedImage = imageData
-                    cell.gifAnimatedImage.contentMode = .scaleToFill
-                    
+                    if url == self.objectsArray[indexPath.row].url{
+                        
+                        let imageData = FLAnimatedImage(animatedGIFData: data)
+                        
+                        cell.turningOffActivityIndicator()
+                        cell.gifAnimatedImage.animatedImage = imageData
+                        cell.gifAnimatedImage.contentMode = .scaleToFill
+                        
+                    }
                 }
             }
             
