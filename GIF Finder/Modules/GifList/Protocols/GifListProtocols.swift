@@ -19,3 +19,9 @@ protocol GifGetter{
     func getGif(url: String, downloadType: ApiRequests, completion: @escaping (Data?, Error?, String) -> ())
     
 }
+
+protocol GifListVCDelegate: NSObject{
+    
+    func findGifs(value: String)
+    
+}

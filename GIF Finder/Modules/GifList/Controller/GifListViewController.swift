@@ -13,26 +13,28 @@ class GifListViewController: UIViewController {
     @IBOutlet var gifListView: GifListView!
     
     //MARK: delegates & datasources
-    var collectionViewDataSource = GifListCWDataSource()
+    var collectionViewDataSource = GifListCVDataSource()
     var navBarDelegate = GifListNavBarDelegate()
     var textFieldDelegate = GifListTextFieldDelegate()
     
-    var gifListArray = [GifList](){
+    //MARK: model
+    var gifListGetter = GifListGetter()
+    
+    //MARK: self private properties
+    private var gifListArray = [GifList](){
         didSet{
             
            self.gifListView.gifListCollectionView.dataSource = self.collectionViewDataSource
            self.collectionViewDataSource.objectsArray = self.gifListArray
            self.gifListView.gifListCollectionView.reloadData()
        
-            
         }
     }
-    
-    var gifListGetter = GifListGetter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.textFieldDelegate.delegate = self
         self.gifListView.gifListNavBar.delegate = navBarDelegate
         self.gifListView.searchTextField.delegate = textFieldDelegate
     }
@@ -51,21 +53,21 @@ class GifListViewController: UIViewController {
             
         })
     }
+    
+}
 
-    @IBAction func searchGifsAction(_ sender: Any) {
+extension GifListViewController: GifListVCDelegate {
+    
+    func findGifs(value: String) {
         
-        guard let userInput = self.gifListView.searchTextField.text else {return}
-        
-        switch userInput{
+        switch value{
         case "":
             self.gifListArray.removeAll()
-            self.gifListView.searchTextField.resignFirstResponder()
         default:
-            self.searchGifs(text: userInput)
-            self.gifListView.searchTextField.resignFirstResponder()
+            self.searchGifs(text: value)
         }
-        
+
     }
-    
+
 }
 

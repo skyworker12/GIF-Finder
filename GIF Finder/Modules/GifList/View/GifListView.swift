@@ -13,16 +13,17 @@ class GifListView: UIView {
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var gifListCollectionView: UICollectionView!
     @IBOutlet weak var gifListNavBar: UINavigationBar!
-    
-     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+ /*
+    func createGestureRecognizer(){
         
-        let touch: UITouch? = touches.first
+        let tap = UIGestureRecognizer(target: self, action: dismissKeyboard(sender: <#T##UIGestureRecognizer#>))
         
-        if touch?.view == self || touch?.view != self.gifListNavBar{
-            
-            self.searchTextField.resignFirstResponder()
-            
-        }
+        tap.cancelsTouchesInView = false
+        
+        self.addGestureRecognizer(tap)
     }
     
+  @objc private func dismissKeyboard(sender: UIGestureRecognizer){
+        self.endEditing(true)
+    }*/
 }

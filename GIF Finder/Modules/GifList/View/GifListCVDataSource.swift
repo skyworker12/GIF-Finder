@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import FLAnimatedImage
 
-class GifListCWDataSource: NSObject, UICollectionViewDataSource{
+class GifListCVDataSource: NSObject, UICollectionViewDataSource{
     
     var objectsArray = [GifList]()
     
