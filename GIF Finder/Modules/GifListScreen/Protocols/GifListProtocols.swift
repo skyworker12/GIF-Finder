@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FLAnimatedImage
 
 protocol GifsGetter {
     
@@ -23,5 +24,11 @@ protocol GifGetter{
 protocol GifListVCDelegate: NSObject{
     
     func findGifs(value: String)
+    
+}
+
+protocol GifListVCRouter: NSObject{
+    
+    func moveToSingleGifScreen(imageUrl: String, imageTitle: String)
     
 }

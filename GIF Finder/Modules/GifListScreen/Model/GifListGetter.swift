@@ -10,7 +10,7 @@ import Foundation
 
 class GifListGetter: GifsGetter {
     
-    var apiManager = APIManager()
+    private var apiManager = APIManager()
     
     func getGifList(text: String, downloadType: ApiRequests, completion: @escaping ([GifList]?, Error?) -> ()){
         

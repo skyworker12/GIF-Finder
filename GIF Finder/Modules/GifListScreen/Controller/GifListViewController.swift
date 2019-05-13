@@ -21,10 +21,11 @@ class GifListViewController: UIViewController {
     var gifListGetter = GifListGetter()
     
     //MARK: self private properties
-    private var gifListArray = [GifList](){
+    internal var gifListArray = [GifList](){
         didSet{
             
            self.gifListView.gifListCollectionView.dataSource = self.collectionViewDataSource
+           self.gifListView.gifListCollectionView.delegate = self.collectionViewDataSource
            self.collectionViewDataSource.objectsArray = self.gifListArray
            self.gifListView.gifListCollectionView.reloadData()
        
@@ -34,40 +35,38 @@ class GifListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.collectionViewDataSource.delegate = self
         self.textFieldDelegate.delegate = self
         self.gifListView.gifListNavBar.delegate = navBarDelegate
         self.gifListView.searchTextField.delegate = textFieldDelegate
+        
     }
     
-   private func searchGifs(text: String){
+   internal func searchGifs(text: String){
         
-        self.gifListGetter.getGifList(text: text, downloadType: .downloadGifList, completion:{[unowned self] data, error in
+        self.gifListGetter.getGifList(text: text, downloadType: .downloadGifList, completion:{[weak self] data, error in
             
             if let data = data{
-                self.gifListArray = data
+                self?.gifListArray = data
             }
             
             if let error = error{
-                print(error.localizedDescription)
+                self?.creatErrorAlert(error)
             }
             
         })
     }
     
-}
-
-extension GifListViewController: GifListVCDelegate {
-    
-    func findGifs(value: String) {
+    private func creatErrorAlert(_ error: Error?){
         
-        switch value{
-        case "":
-            self.gifListArray.removeAll()
-        default:
-            self.searchGifs(text: value)
-        }
-
+        let alertController = UIAlertController(title: "Ошибка", message: error?.localizedDescription, preferredStyle: .alert)
+        
+        alertController.addAction(UIAlertAction(title: "Ок", style: .default))
+        
+        self.present(alertController, animated: true, completion: nil)
+        
     }
-
+    
 }
+
 

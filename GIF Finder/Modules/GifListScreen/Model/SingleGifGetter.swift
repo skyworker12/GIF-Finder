@@ -10,7 +10,7 @@ import Foundation
 
 class SingleGifGetter: GifGetter{
     
-   var apiManager = APIManager()
+  private var apiManager = APIManager()
     
     func getGif(url: String, downloadType: ApiRequests, completion: @escaping (Data?, Error?, String) -> ()){
         

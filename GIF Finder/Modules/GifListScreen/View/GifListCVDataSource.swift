@@ -10,9 +10,11 @@ import Foundation
 import UIKit
 import FLAnimatedImage
 
-class GifListCVDataSource: NSObject, UICollectionViewDataSource{
+class GifListCVDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDelegate{
     
     var objectsArray = [GifList]()
+    
+    weak var delegate: GifListVCRouter?
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return objectsArray.count
@@ -52,6 +54,13 @@ class GifListCVDataSource: NSObject, UICollectionViewDataSource{
         } )
 
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        //Эта часть еще в работе
+        self.delegate?.moveToSingleGifScreen(imageUrl: "1", imageTitle: "2")
+        
     }
     
 }
