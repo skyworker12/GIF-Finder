@@ -14,7 +14,7 @@ class GifListViewController: UIViewController {
     
     //MARK: delegates & datasources
     var collectionViewDataSource = GifListCVDataSource()
-    var navBarDelegate = GifListNavBarDelegate()
+    var navBarDelegate = NavBarDelegate()
     var textFieldDelegate = GifListTextFieldDelegate()
     
     //MARK: model

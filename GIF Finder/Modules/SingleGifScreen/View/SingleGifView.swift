@@ -12,12 +12,41 @@ import FLAnimatedImage
 class SingleGifView: UIView {
 
     @IBOutlet weak var animatedImage: FLAnimatedImageView!
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    @IBOutlet weak var navBar: UINavigationBar!
+    @IBOutlet weak var titleNavBarItem: UINavigationItem!
+    @IBOutlet weak var toolBar: UIToolbar!
+    @IBOutlet weak var heartToolBarItem: UIBarButtonItem!
+    @IBOutlet weak var viewsCountLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    func setTitle(title: String){
+        
+        if title == ""{
+            self.titleNavBarItem.title = "title"
+        }else{
+            self.titleNavBarItem.title = title
+        }
+        
     }
-    */
-
+    
+    func setImage(gif: FLAnimatedImage){
+        
+        self.animatedImage.animatedImage = gif
+        //self.animatedImage.contentMode = .scaleToFill
+        
+    }
+    
+    func turningOnActivityIndicator(){
+        
+        self.activityIndicator.isHidden = false
+        self.activityIndicator.startAnimating()
+        
+    }
+    
+    func turningOffActivityIndicator(){
+        
+        self.activityIndicator.isHidden = true
+        self.activityIndicator.stopAnimating()
+        
+    }
 }

@@ -58,8 +58,7 @@ class GifListCVDataSource: NSObject, UICollectionViewDataSource, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        //Эта часть еще в работе
-        self.delegate?.moveToSingleGifScreen(imageUrl: "1", imageTitle: "2")
+        self.delegate?.moveToSingleGifScreen(gifParams: self.objectsArray[indexPath.item])
         
     }
     

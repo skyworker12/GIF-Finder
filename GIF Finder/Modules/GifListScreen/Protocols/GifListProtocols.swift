@@ -29,6 +29,6 @@ protocol GifListVCDelegate: NSObject{
 
 protocol GifListVCRouter: NSObject{
     
-    func moveToSingleGifScreen(imageUrl: String, imageTitle: String)
+    func moveToSingleGifScreen(gifParams: GifList)
     
 }

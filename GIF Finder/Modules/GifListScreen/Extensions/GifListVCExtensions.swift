@@ -26,9 +26,12 @@ extension GifListViewController: GifListVCDelegate {
 
 extension GifListViewController: GifListVCRouter{
     
-    func moveToSingleGifScreen(imageUrl: String, imageTitle: String) {
+    func moveToSingleGifScreen(gifParams: GifList) {
         
         guard let singleGifVC = UIStoryboard(name: "SingleGifScreen", bundle: nil).instantiateViewController(withIdentifier: "SingleGif") as? SingleGifViewController else {return}
+        
+        singleGifVC.gifParams = gifParams
+        
         self.present(singleGifVC, animated: true, completion: nil)
 
     }

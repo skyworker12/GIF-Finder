@@ -30,20 +30,71 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DcF-jh-g5N" customClass="FLAnimatedImageView">
                                 <rect key="frame" x="16" y="96" width="288" height="288"/>
                             </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Z8W-r4-NL2">
+                                <rect key="frame" x="150" y="230" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fNn-TT-EBB">
+                                <rect key="frame" x="0.0" y="433.5" width="320" height="46.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46.5" id="da5-Tb-0Ff"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Item" image="icons8-сердце-filled-50" width="97" style="plain" id="MCQ-RV-yfi">
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </toolbar>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8R4-73-jub">
+                                <rect key="frame" x="16" y="392" width="288" height="18"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Просмотры:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kt7-6H-Gby">
+                                        <rect key="frame" x="0.0" y="0.0" width="94.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IML-tQ-orJ">
+                                        <rect key="frame" x="94.5" y="0.0" width="193.5" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="18" id="yp9-YW-7Cg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="fNn-TT-EBB" firstAttribute="leading" secondItem="MNu-1Q-mhN" secondAttribute="leading" id="1aP-oF-7f1"/>
+                            <constraint firstItem="fNn-TT-EBB" firstAttribute="top" secondItem="8R4-73-jub" secondAttribute="bottom" constant="23.5" id="2vR-5n-RO4"/>
+                            <constraint firstItem="8R4-73-jub" firstAttribute="top" secondItem="Z8W-r4-NL2" secondAttribute="bottom" constant="142" id="3Ei-3F-Y0y"/>
+                            <constraint firstItem="Z8W-r4-NL2" firstAttribute="top" secondItem="9ej-O3-lOK" secondAttribute="bottom" constant="166" id="8Gw-P9-Y0Z"/>
+                            <constraint firstItem="DcF-jh-g5N" firstAttribute="leading" secondItem="MNu-1Q-mhN" secondAttribute="leading" constant="16" id="AAi-KH-KRh"/>
+                            <constraint firstItem="DcF-jh-g5N" firstAttribute="top" secondItem="9ej-O3-lOK" secondAttribute="bottom" constant="32" id="G9a-wC-ieF"/>
                             <constraint firstItem="9ej-O3-lOK" firstAttribute="top" secondItem="MNu-1Q-mhN" secondAttribute="top" id="Nzz-2p-Ssm"/>
-                            <constraint firstItem="DcF-jh-g5N" firstAttribute="centerY" secondItem="Q84-36-LwA" secondAttribute="centerY" id="QMf-Nj-HDS"/>
-                            <constraint firstItem="9ej-O3-lOK" firstAttribute="centerX" secondItem="DcF-jh-g5N" secondAttribute="centerX" id="bGG-fm-pCs"/>
-                            <constraint firstItem="DcF-jh-g5N" firstAttribute="top" secondItem="9ej-O3-lOK" secondAttribute="bottom" constant="32" id="jN4-GP-ijt"/>
+                            <constraint firstItem="8R4-73-jub" firstAttribute="top" secondItem="DcF-jh-g5N" secondAttribute="bottom" constant="8" id="Q5L-du-KjB"/>
+                            <constraint firstAttribute="bottom" secondItem="fNn-TT-EBB" secondAttribute="bottom" id="SL7-5X-uAA"/>
+                            <constraint firstItem="8R4-73-jub" firstAttribute="leading" secondItem="MNu-1Q-mhN" secondAttribute="leading" constant="16" id="YTL-zd-2bh"/>
+                            <constraint firstItem="Z8W-r4-NL2" firstAttribute="leading" secondItem="MNu-1Q-mhN" secondAttribute="leading" constant="150" id="cTA-kH-Q7Y"/>
+                            <constraint firstItem="MNu-1Q-mhN" firstAttribute="trailing" secondItem="DcF-jh-g5N" secondAttribute="trailing" constant="16" id="oiS-TU-PVj"/>
                             <constraint firstAttribute="trailing" secondItem="9ej-O3-lOK" secondAttribute="trailing" id="psa-0r-5L4"/>
+                            <constraint firstItem="MNu-1Q-mhN" firstAttribute="trailing" secondItem="8R4-73-jub" secondAttribute="trailing" constant="16" id="qXp-SH-1OO"/>
+                            <constraint firstItem="fNn-TT-EBB" firstAttribute="trailing" secondItem="MNu-1Q-mhN" secondAttribute="trailing" id="rVe-Zo-Mkr"/>
                             <constraint firstItem="9ej-O3-lOK" firstAttribute="leading" secondItem="Q84-36-LwA" secondAttribute="leading" id="tWx-sj-HHH"/>
-                            <constraint firstItem="DcF-jh-g5N" firstAttribute="leading" secondItem="Q84-36-LwA" secondAttribute="leadingMargin" id="uAZ-Xv-ZxM"/>
+                            <constraint firstItem="MNu-1Q-mhN" firstAttribute="trailing" secondItem="Z8W-r4-NL2" secondAttribute="trailing" constant="150" id="uOf-wP-l2z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MNu-1Q-mhN"/>
                         <connections>
+                            <outlet property="activityIndicator" destination="Z8W-r4-NL2" id="tDQ-Lk-m4g"/>
                             <outlet property="animatedImage" destination="DcF-jh-g5N" id="0Nl-fg-4eN"/>
+                            <outlet property="heartToolBarItem" destination="MCQ-RV-yfi" id="ZWM-aB-WuN"/>
+                            <outlet property="navBar" destination="9ej-O3-lOK" id="5fK-o8-RDY"/>
+                            <outlet property="titleNavBarItem" destination="Oje-bU-n1f" id="NAX-vL-fzm"/>
+                            <outlet property="toolBar" destination="fNn-TT-EBB" id="XtV-tA-dBM"/>
+                            <outlet property="viewsCountLabel" destination="IML-tQ-orJ" id="0BD-dD-6kE"/>
                         </connections>
                     </view>
                     <connections>
@@ -55,4 +106,7 @@
             <point key="canvasLocation" x="90" y="93.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-сердце-filled-50" width="50" height="50"/>
+    </resources>
 </document>
